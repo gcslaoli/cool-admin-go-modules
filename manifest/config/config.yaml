@@ -26,6 +26,10 @@ database:
     createdAt: "createTime" # 创建时间字段
     updatedAt: "updateTime" # 更新时间字段
 
+redis:
+  cool:
+    address: "127.0.0.1:6379"
+    db: 0
 
 cool:
   autoMigrate: true
@@ -47,3 +51,6 @@ modules:
         enable: 1
       log:
         enable: 1
+  weixinmp:
+    appid: "wxe741fb4f943b4a35"
+    appsecret: "cdfd019b6e05b0b214cff9c40e7750bf"
