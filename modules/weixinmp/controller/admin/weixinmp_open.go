@@ -72,3 +72,22 @@ func (c *WeixinmpOpenController) MessageGet(ctx context.Context, req *MessageGet
 	r.Response.WriteExit(req.Echostr)
 	return
 }
+
+// MessagePostReq 消息请求
+type MessagePostReq struct {
+	g.Meta `path:"/message" method:"POST"`
+}
+
+// MessagePostRes 消息响应
+type MessagePostRes struct {
+}
+
+// MessagePost 消息接收 用于接收微信公众号消息
+func (c *WeixinmpOpenController) MessagePost(ctx context.Context, req *MessagePostReq) (res *MessagePostRes, err error) {
+	r := g.RequestFromCtx(ctx)
+	reqmap := r.GetMap()
+	g.Dump(reqmap)
+
+	r.Response.WriteExit("success")
+	return
+}

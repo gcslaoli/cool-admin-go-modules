@@ -23,5 +23,23 @@ func TestWeixinmp(t *testing.T) {
 	} else {
 		t.Logf("ipList: %s", ipList)
 	}
+	total, count, openid, next_openid, err := WeiXinMpService.UserGet(ctx, "")
+	if err != nil {
+		t.Error(err)
+	} else {
+		t.Logf("total: %d, count: %d, openid: %s, next_openid: %s", total, count, openid, next_openid)
+	}
+	userInfo, err := WeiXinMpService.GetUserInfo(ctx, openid[0], "zh_CN")
+	if err != nil {
+		t.Error(err)
+	} else {
+		t.Logf("userInfo: %+v", userInfo)
+	}
+	userInfoList, err := WeiXinMpService.BatchGetUserInfo(ctx, []map[string]string{{"openid": openid[0], "lang": "zh_CN"}})
+	if err != nil {
+		t.Error(err)
+	} else {
+		t.Logf("userInfoList: %+v", userInfoList[0])
+	}
 
 }

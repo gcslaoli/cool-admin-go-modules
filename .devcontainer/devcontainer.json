@@ -25,6 +25,7 @@
       ]
     }
   },
+  "appPort": "80:8300",
   "containerEnv": {
     // "PGIT_PREFIX": "https://gh.hjmcloud.cn/",
     "devcontainerId": "${devcontainerId}",

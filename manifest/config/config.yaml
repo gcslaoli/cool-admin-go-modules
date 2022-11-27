@@ -54,3 +54,4 @@ modules:
   weixinmp:
     appid: "wxe741fb4f943b4a35"
     appsecret: "cdfd019b6e05b0b214cff9c40e7750bf"
+    token: "gcslaoli"
