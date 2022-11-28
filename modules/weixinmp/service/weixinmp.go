@@ -43,11 +43,11 @@ func (s *WeixinmpService) GetAccessToken(ctx g.Ctx) (accessToken string, err err
 		return
 	}
 
-	result, err := cool.CacheManager.GetOrSetFunc(ctx, "weixinmp:accesstoken", getFunc, 3600*time.Second)
+	res, err := cool.CacheManager.GetOrSetFunc(ctx, "weixinmp:accesstoken", getFunc, 3600*time.Second)
 	if err != nil {
 		return "", err
 	}
-	accessToken = result.String()
+	accessToken = res.String()
 	return
 }
 
@@ -84,7 +84,6 @@ func (s *WeixinmpService) CheckSignature(ctx g.Ctx, signature string, timestamp 
 	arr.Sort()
 	// 将排序后的数组拼接成字符串
 	str := arr.Join("")
-	g.Log().Debug(ctx, str)
 	// 对字符串进行sha1加密
 	sha1Str := gsha1.Encrypt(str)
 	// 将加密后的字符串与signature进行对比
@@ -189,5 +188,25 @@ func (s *WeixinmpService) BatchGetUserInfo(ctx g.Ctx, user_list []map[string]str
 		return
 	}
 	user_info_list = result.UserInfoList
+	return
+}
+
+// UpdateRemark 设置用户备注名
+func (s *WeixinmpService) UpdateRemark(ctx g.Ctx, openid, remark string) (err error) {
+	accessToken, err := s.GetAccessToken(ctx)
+	if err != nil {
+		return err
+	}
+	url := "https://api.weixin.qq.com/cgi-bin/user/info/updateremark?access_token=" + accessToken
+	type Result struct {
+		Errcode int    `json:"errcode"`
+		Errmsg  string `json:"errmsg"`
+	}
+	var result Result
+	g.Client().ContentJson().PostVar(ctx, url, g.Map{"openid": openid, "remark": remark}).Scan(&result)
+	if result.Errcode != 0 {
+		err = gerror.New(result.Errmsg)
+		return
+	}
 	return
 }

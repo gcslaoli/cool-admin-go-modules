@@ -41,5 +41,12 @@ func TestWeixinmp(t *testing.T) {
 	} else {
 		t.Logf("userInfoList: %+v", userInfoList[0])
 	}
+	// 设置用户备注名
+	err = WeiXinMpService.UpdateRemark(ctx, openid[0], "test")
+	if err != nil {
+		t.Error(err)
+	} else {
+		t.Logf("UpdateRemark success")
+	}
 
 }

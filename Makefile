@@ -44,3 +44,10 @@ build.public:
 .PHONY: init
 init: ## 初始化环境变量
 	bash scripts/init.sh
+
+.PHONY: docs
+docs: ## 打开pkgsite文档
+	@set -e; \
+	go install golang.org/x/pkgsite/cmd/pkgsite@latest;\
+	echo "http://localhost:6060/github.com/gcslaoli/cool-admin-go-modules";\
+	pkgsite -http=localhost:6060

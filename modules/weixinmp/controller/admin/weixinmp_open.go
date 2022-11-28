@@ -6,7 +6,6 @@ import (
 	"github.com/cool-team-official/cool-admin-go/cool"
 	"github.com/gcslaoli/cool-admin-go-modules/modules/weixinmp/service"
 
-	"github.com/gogf/gf/v2/encoding/gjson"
 	"github.com/gogf/gf/v2/errors/gerror"
 	"github.com/gogf/gf/v2/frame/g"
 )
@@ -23,29 +22,6 @@ func init() {
 	}
 	// 注册路由
 	cool.RegisterControllerSimple(weixinmp_open_controller)
-}
-
-// 增加 Welcome 演示 方法
-type WeixinmpOpenWelcomeReq struct {
-	g.Meta `path:"/welcome" method:"GET"`
-}
-type WeixinmpOpenWelcomeRes struct {
-	*cool.BaseRes
-	Data interface{} `json:"data"`
-}
-
-func (c *WeixinmpOpenController) Welcome(ctx context.Context, req *WeixinmpOpenWelcomeReq) (res *WeixinmpOpenWelcomeRes, err error) {
-	WeixinmpService := service.NewWeixinmpService()
-	accessToken, err := WeixinmpService.GetAccessToken(ctx)
-	if err != nil {
-		return nil, err
-	}
-	g.Log().Debug(ctx, "accessToken", accessToken)
-	res = &WeixinmpOpenWelcomeRes{
-		BaseRes: cool.Ok("Welcome to Cool Admin Go"),
-		Data:    gjson.New(`{"name": "Cool Admin Go", "age":0}`),
-	}
-	return
 }
 
 // MessageGetReq 消息请求
