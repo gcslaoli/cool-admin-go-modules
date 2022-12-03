@@ -3,17 +3,17 @@ module github.com/gcslaoli/cool-admin-go-modules
 go 1.18
 
 require (
-	github.com/cool-team-official/cool-admin-go/cool v1.0.8
-	github.com/cool-team-official/cool-admin-go/modules/base v1.0.8
-	github.com/cool-team-official/cool-admin-go/modules/dict v1.0.8
-	github.com/cool-team-official/cool-admin-go/modules/space v1.0.8
-	github.com/cool-team-official/cool-admin-go/modules/task v1.0.8
-	github.com/gogf/gf/v2 v2.2.4
+	github.com/cool-team-official/cool-admin-go/cool v1.0.11
+	github.com/cool-team-official/cool-admin-go/modules/base v1.0.11
+	github.com/cool-team-official/cool-admin-go/modules/dict v1.0.11
+	github.com/cool-team-official/cool-admin-go/modules/space v1.0.11
+	github.com/cool-team-official/cool-admin-go/modules/task v1.0.11
+	github.com/gogf/gf/v2 v2.2.5
 )
 
 require (
-	github.com/go-sql-driver/mysql v1.6.0 // indirect
-	github.com/gogf/gf/contrib/drivers/mysql/v2 v2.2.4 // indirect
+	github.com/go-sql-driver/mysql v1.7.0 // indirect
+	github.com/gogf/gf/contrib/drivers/mysql/v2 v2.2.5 // indirect
 	gorm.io/driver/mysql v1.4.4 // indirect
 )
 
@@ -21,14 +21,14 @@ require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/clbanning/mxj/v2 v2.5.7 // indirect
-	github.com/cool-team-official/cool-admin-go/contrib/drivers/mysql v1.0.8
+	github.com/cool-team-official/cool-admin-go/contrib/drivers/mysql v1.0.11
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
-	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
+	github.com/golang-jwt/jwt/v4 v4.4.3 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/grokify/html-strip-tags-go v0.0.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
