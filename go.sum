@@ -79,6 +79,8 @@ github.com/gogf/gf/contrib/drivers/mysql/v2 v2.2.5 h1:lbktAfOabQV9ZzLdEUK6DkELnq
 github.com/gogf/gf/contrib/drivers/mysql/v2 v2.2.5/go.mod h1:z+/0qiOwMroAnj5ESuobTv0l5P83rf+XR3r6Fj8WJyk=
 github.com/gogf/gf/contrib/drivers/mysql/v2 v2.3.2 h1:BZww6QOFgiN/YvovUtN64sgnq59TIg8vtkG8AL6eSl0=
 github.com/gogf/gf/contrib/drivers/mysql/v2 v2.3.2/go.mod h1:z+/0qiOwMroAnj5ESuobTv0l5P83rf+XR3r6Fj8WJyk=
+github.com/gogf/gf/contrib/nosql/redis/v2 v2.3.2 h1:AsYganxtge0nz7eYDYdvGH6E2pRe5IuK45/OLHIFrj8=
+github.com/gogf/gf/contrib/nosql/redis/v2 v2.3.2/go.mod h1:V9o2BF9ovJnaZhHImHAanqUgjX4kI51lgU45u5rPqvw=
 github.com/gogf/gf/v2 v2.0.0/go.mod h1:apktt6TleWtCIwpz63vBqUnw8MX8gWKoZyxgDpXFtgM=
 github.com/gogf/gf/v2 v2.2.5 h1:XyRSfn/gqdrGb03p1OGhXd4q6kVf1BL/pryT2Y1NyBA=
 github.com/gogf/gf/v2 v2.2.5/go.mod h1:thvkyb43RWUu/m05sRm4CbH9r7t7/FrW2M56L9Ystwk=

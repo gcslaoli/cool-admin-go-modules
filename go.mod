@@ -8,6 +8,7 @@ require (
 	github.com/cool-team-official/cool-admin-go/modules/dict v1.0.17
 	github.com/cool-team-official/cool-admin-go/modules/space v1.0.17
 	github.com/cool-team-official/cool-admin-go/modules/task v1.0.17
+	github.com/gogf/gf/contrib/nosql/redis/v2 v2.3.2
 	github.com/gogf/gf/v2 v2.3.2
 )
 
